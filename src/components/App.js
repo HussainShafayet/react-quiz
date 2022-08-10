@@ -1,13 +1,17 @@
 import "../styles/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Nav from "./Nav/NavBar";
+import Layout from "./Layout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+
 
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-    </div>
+    <Layout>
+      <Home />
+      <About />
+    </Layout>
   );
 }
 
