@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export default function Quiz() {
   return (
@@ -24,6 +25,11 @@ export default function Quiz() {
       <div class="progress">
         <div class="progress-bar" role="progressbar" style={{width: '50%'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
       </div>
+      <Link to="/result">
+          <Button>
+              Next Question
+          </Button>
+      </Link>
     </div>
   );
 }

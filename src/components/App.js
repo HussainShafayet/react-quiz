@@ -2,20 +2,27 @@ import "../styles/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Layout from "./Layout";
 import Home from "./pages/Home";
-import About from "./pages/About";
+import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
 import Quiz from "./pages/Quiz";
 import Result from "./pages/Result";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 
 function App() {
   return (
-    <Layout>
-      {/* <Home /> */}
-      {/* <About /> */}
-      <Quiz />
-      <Result />
-    </Layout>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/signup" element={<SignUp />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/quiz" element={<Quiz />} />
+          <Route exact path="/result" element={<Result />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 
