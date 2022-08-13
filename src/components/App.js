@@ -4,6 +4,7 @@ import Layout from "./Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Quiz from "./pages/Quiz";
+import Result from "./pages/Result";
 
 
 
@@ -13,6 +14,7 @@ function App() {
       {/* <Home /> */}
       {/* <About /> */}
       <Quiz />
+      <Result />
     </Layout>
   );
 }

@@ -1,7 +1,11 @@
 import React from 'react'
+import Question from './Question'
 
 export default function Analysis() {
   return (
-    <div>Analysis</div>
+    <div>
+        Answer analysis
+        <Question />
+    </div>
   )
 }
