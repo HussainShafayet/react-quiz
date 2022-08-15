@@ -22,8 +22,8 @@ export default function Quiz() {
           />
         </Form.Group>
       </form>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" style={{width: '50%'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+      <div className="progress">
+        <div className="progress-bar" role="progressbar" style={{width: '50%'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
       </div>
       <Link to="/result">
           <Button>

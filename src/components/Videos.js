@@ -6,15 +6,15 @@ export default function Videos() {
   return (
     <div>
       <div className="row">
-        <div class="col-lg-4 col-md-12">
+        <div className="col-lg-4 col-md-12">
           <Link to="quiz">
             <Video />
           </Link>
         </div>
-        <div class="col-lg-4 col-md-12">
+        <div className="col-lg-4 col-md-12">
           <Link to="quiz"> <Video /> </Link>
         </div>
-        <div class="col-lg-4 col-md-12">
+        <div className="col-lg-4 col-md-12">
           <Link to="quiz"><Video /></Link> 
         </div>
       </div>
