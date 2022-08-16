@@ -20,28 +20,17 @@ function App() {
       <AuthProvider>
       <Layout>
         <Routes>
-          <Route exact path="/" element={
-            <Home />}/>
-          <Route exact path="/signup" element={
-            <PublicRoute >
-              <SignUp />
-            </PublicRoute>
-            }/>
-          <Route exact path="/login" element={
-
-                <Login />
-            }/>
+          <Route element={<PublicRoute />}>
+            <Route path="/signup" element={<SignUp />} />
+            <Route exact path="/login" element={<Login />}/>
+          </Route>
           <Route exact path="/logout" element={<Login />} />
-          <Route exact path="/quiz" element={
-            <PrivateRoute>
-              <Quiz />
-            </PrivateRoute>} /> 
-            
-          <Route exact path="/result" element={
-            <PrivateRoute>
-              <Result />
-            </PrivateRoute>} />
-            <Route path="*" element={<p>There's nothing here: 404!</p>} />
+          <Route element={<PrivateRoute />} > 
+            <Route exact path="/" element={<Home />}/>
+            <Route exact path="/quiz" element={<Quiz />} />
+            <Route exact path="/result" element={<Result />} />
+          </Route>
+          <Route path="*" element={<p>There's nothing here: 404!</p>} />
         </Routes>
       </Layout>
       </AuthProvider>
