@@ -132,7 +132,7 @@ export default function SignUpForm() {
         </div>
 
         <div className="d-flex justify-content-center flex-column mx-4">
-          <Button type='sumbit' className='btn btn-info' disable={loading}>
+          <Button type='sumbit' className='btn btn-info'>
             {loading ?
               <div>
                 <Spinner

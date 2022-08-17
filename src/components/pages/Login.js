@@ -61,7 +61,7 @@ export default function Login() {
               label="Remember me"
             />
           </Form.Group>
-          <Button type="sumbit" className="btn btn-info" disable={loading}>
+          <Button type="sumbit" className="btn btn-info">
             {loading ? (
               <>
                 <Spinner
