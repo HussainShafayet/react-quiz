@@ -19,7 +19,7 @@ export default function Videos() {
           >
             {videos.map((video) => (
               <div className='mt-2'>
-                <Link to="quiz" key={video.youtubeID}>
+                <Link to={`quiz/${video.youtubeID}`} key={video.youtubeID}>
                   <Video
                     title={video.title}
                     id={video.youtubeID}

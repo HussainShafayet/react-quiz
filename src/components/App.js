@@ -27,8 +27,8 @@ function App() {
           <Route exact path="/logout" element={<Login />} />
           <Route element={<PrivateRoute />} > 
             <Route exact path="/" element={<Home />}/>
-            <Route exact path="/quiz" element={<Quiz />} />
-            <Route exact path="/result" element={<Result />} />
+            <Route exact path="/quiz/:id" element={<Quiz />} />
+            <Route exact path="/result/:id" element={<Result />} />
           </Route>
           <Route path="*" element={<p>There's nothing here: 404!</p>} />
         </Routes>
