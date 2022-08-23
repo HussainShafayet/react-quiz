@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Summary() {
+export default function Summary({score,noq}) {
   return (
     <div>
-        Your Score is: 9/10
+        Your Score is {score} out of { noq*5 }
     </div>
   )
 }
