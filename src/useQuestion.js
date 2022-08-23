@@ -17,21 +17,19 @@ export default function useQuestion(videoID) {
             setError(false);
             setLoading(true);
             let result = await get(queryQuestion);
-            console.log(result);
             setLoading(false);
             if(result.exists()){
-                setQuestion((prevQuestion)=>{
-                    return [...prevQuestion, ...Object.values(result.val())];
-                });
+                setQuestion(result.val())
             }else{
                 setLoading(false);
                 setError(true);
             }
-
+            
         }catch(error){
 
         }
     }
+    
     fetchQuestion();
   },[videoID]);
   return {loading,error,question}

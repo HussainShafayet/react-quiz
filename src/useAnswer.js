@@ -18,9 +18,7 @@ export default function useAnswer(videoID) {
         let result = await get(queryAnswer);
         setLoading(false);
         if (result.exists()) {
-          setAnswer((prevAnswer) => {
-            return [...prevAnswer, ...Object.values(result.val())];
-          });
+          setAnswer(result.val());
         } else {
           setLoading(false);
           setError(true);

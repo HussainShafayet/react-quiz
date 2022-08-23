@@ -17,7 +17,7 @@ export default function Question({answers = []}) {
                   checked={item.isChecked}
                   label={item.title}
                   disabled
-                  className={item.correct?'text-primary':item.isChecked?'text-danger':null}
+                  className={item.correct?'text-success':item.isChecked?'text-danger':null}
                 />
               ))}
             </Form.Group>
