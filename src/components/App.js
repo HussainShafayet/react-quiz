@@ -17,23 +17,24 @@ import PublicRoute from "./PublicRoute";
 function App() {
   return (
     <Router>
-      <AuthProvider>
+      {/* <AuthProvider> */}
       <Layout>
         <Routes>
           <Route element={<PublicRoute />}>
             <Route path="/signup" element={<SignUp />} />
-            <Route exact path="/login" element={<Login />}/>
+            <Route exact path="/login" element={<Login />} />
           </Route>
           <Route exact path="/logout" element={<Login />} />
-          <Route element={<PrivateRoute />} > 
-            <Route exact path="/" element={<Home />}/>
+          <Route exact path="/" element={<Home />} />
+          {/* <Route element={<PrivateRoute />}>
+            <Route exact path="/" element={<Home />} />
             <Route exact path="/quiz/:id" element={<Quiz />} />
             <Route exact path="/result/:id" element={<Result />} />
-          </Route>
+          </Route> */}
           <Route path="*" element={<p>There's nothing here: 404!</p>} />
         </Routes>
       </Layout>
-      </AuthProvider>
+      {/* </AuthProvider> */}
     </Router>
   );
 }

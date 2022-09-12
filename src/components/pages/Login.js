@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Form, Button, Spinner} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../contexts/AuthContext';
+// import { useAuth } from '../../contexts/AuthContext';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -9,7 +9,7 @@ export default function Login() {
   const [error, setError] = React.useState('');
   const [rememberMe, setRemeberMe] = useState(false);
   const [loading, setLoading] = useState(false);
-  const {login} = useAuth();
+  // const {login} = useAuth();
   const navigate = useNavigate();
   async function handleLogin(e){
     e.preventDefault();
@@ -17,7 +17,7 @@ export default function Login() {
     try{
       setError('');
       setLoading(true);
-      await login(email, password);
+      // await login(email, password);
       setLoading(false);
       navigate('/');
     }catch(error){
